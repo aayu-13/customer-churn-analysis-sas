@@ -1,0 +1,81 @@
+
+PROC CONTENTS
+-------------------------------------------------------------------------------
+
+Data Set Name: churn_data
+Observations:  150
+Variables:     21
+
+Variables (in alphabetical order):
+
+  #  Variable          Type    Len  Format    Label
+---  ----------------  ----  -----  --------  ----------------
+  1  Churn             Char      3            Churn
+  2  Contract          Char     14            Contract
+  3  customerID        Char     10            customerID
+  4  Dependents        Char      3            Dependents
+  5  DeviceProtection  Char     19            DeviceProtection
+  6  gender            Char      6            gender
+  7  InternetService   Char     11            InternetService
+  8  MonthlyCharges     Num      8  BEST12.2  MonthlyCharges
+  9  MultipleLines     Char     16            MultipleLines
+ 10  OnlineBackup      Char     19            OnlineBackup
+ 11  OnlineSecurity    Char     19            OnlineSecurity
+ 12  PaperlessBilling  Char      3            PaperlessBilling
+ 13  Partner           Char      3            Partner
+ 14  PaymentMethod     Char     25            PaymentMethod
+ 15  PhoneService      Char      3            PhoneService
+ 16  SeniorCitizen      Num      8            SeniorCitizen
+ 17  StreamingMovies   Char     19            StreamingMovies
+ 18  StreamingTV       Char     19            StreamingTV
+ 19  TechSupport       Char     19            TechSupport
+ 20  tenure             Num      8            tenure
+ 21  TotalCharges       Num      8  BEST12.2  TotalCharges
+
+-------------------------------------------------------------------------------
+
+
+  Obs  CUSTOMERID  GENDER  SENIORCITIZEN  PARTNER  DEPENDENTS  TENURE  PHONESERVICE     MULTIPLELINES  INTERNETSERVICE       ONLINESECURITY         ONLINEBACKUP     DEVICEPROTECTION          TECHSUPPORT          STREAMINGTV      STREAMINGMOVIES        CONTRACT  PAPERLESSBILLING              PAYMENTMETHOD  MONTHLYCHARGES  TOTALCHARGES  CHURN
+-----  ----------  ------  -------------  -------  ----------  ------  ------------  ----------------  ---------------  -------------------  -------------------  -------------------  -------------------  -------------------  -------------------  --------------  ----------------  -------------------------  --------------  ------------  -----
+    1  7590-VHVEG  Female              0  Yes      No               1  No            No phone service  DSL              No                   Yes                  No                   No                   No                   No                   Month-to-month  Yes               Electronic check                    29.85         29.85  No
+    2  7760-OYPDY  Female              0  No       No               2  Yes           No                Fiber optic      No                   No                   No                   No                   Yes                  No                   Month-to-month  Yes               Electronic check                    80.65        144.15  Yes
+    3  9848-JQJTX  Male                0  No       No              72  Yes           Yes               Fiber optic      No                   Yes                  Yes                  No                   Yes                  Yes                  Two year        Yes               Bank transfer (automatic)           100.9       7459.05  No
+    4  4080-OGPJL  Female              0  No       No               8  Yes           Yes               DSL              Yes                  No                   No                   Yes                  No                   Yes                  Month-to-month  No                Electronic check                    71.15        563.65  Yes
+    5  0956-SYCWG  Female              0  No       No              13  Yes           No                No               No internet service  No internet service  No internet service  No internet service  No internet service  No internet service  One year        No                Electronic check                    19.65         244.8  No
+    6  1251-KRREG  Male                0  No       No               2  Yes           Yes               DSL              No                   Yes                  No                   No                   No                   No                   Month-to-month  Yes               Mailed check                         54.4         114.1  Yes
+    7  2080-SRCDE  Female              0  No       Yes              1  Yes           Yes               No               No internet service  No internet service  No internet service  No internet service  No internet service  No internet service  Month-to-month  No                Mailed check                         25.4          25.4  No
+    8  2739-CACDQ  Female              1  No       No              17  Yes           Yes               Fiber optic      No                   No                   Yes                  No                   No                   No                   Month-to-month  Yes               Credit card (automatic)             82.65       1470.05  No
+    9  6158-HDPXZ  Male                0  No       No               1  No            No phone service  DSL              No                   No                   No                   No                   No                   No                   Month-to-month  No                Mailed check                        25.35         25.35  No
+   10  3935-TBRZZ  Male                0  Yes      Yes             44  Yes           Yes               No               No internet service  No internet service  No internet service  No internet service  No internet service  No internet service  One year        No                Mailed check                         25.7        1110.5  No
+
+... 90 more observations (showing 10 of 100)
+
+Churn  Total_Customers  Percentage
+-----  ---------------  ----------
+   No              108        72.0
+  Yes               42        28.0
+      Contract  Churn  Count
+--------------  -----  -----
+Month-to-month     No     54
+Month-to-month    Yes     36
+      Two year     No     27
+      One year     No     27
+      One year    Yes      6
+                                                   The FREQ Procedure
+
+Table of Risk by Churn
+
+Risk |        No |       Yes |      Total
+-----+-----------+-----------+-----------
+High |         5 |        10 |         15
+     |      5.00 |     10.00 |      15.00
+     |     33.33 |     66.67 |     100.00
+     |      7.35 |     31.25 |      15.00
+-----+-----------+-----------+-----------
+Low  |        63 |        22 |         85
+     |     63.00 |     22.00 |      85.00
+     |     74.12 |     25.88 |     100.00
+     |     92.65 |     68.75 |      85.00
+-----+-----------+-----------+-----------
+Total |        68 |        32 |        100
+

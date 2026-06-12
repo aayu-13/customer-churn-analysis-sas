@@ -1,0 +1,36 @@
+Jenner 0.1.0 (Unlicensed - limited to 100 observations)
+Get a license at https://jenneranalytics.com/license
+
+NOTE: Fileref CHURNCSV assigned to churn.csv.
+NOTE: DATA _null_
+
+NOTE: Writing to fileref churncsv (/tmp/work/churn.csv)
+NOTE: DATA _null_ completed. Output written to fileref churncsv (/tmp/work/churn.csv)
+NOTE: PROC IMPORT datafile=churn.csv out=work.churn_data
+
+NOTE: Imported 150 rows from churn.csv.
+NOTE: PROC CONTENTS data=churn_data
+
+NOTE: PROC CONTENTS completed: 150 observations, 21 variables
+NOTE: PROC PRINT data=churn_data
+
+NOTE: Unlicensed mode - input limited to 100 observations.
+NOTE: PROC PRINT completed: 10 observations printed, 21 variables
+NOTE: PROC SQL 
+
+NOTE: PROC SQL statement used.
+NOTE: PROC SQL 
+
+NOTE: PROC SQL statement used.
+NOTE: DATA high_risk
+
+NOTE: Unlicensed mode - output limited to 100 observations.
+
+NOTE: Read 100 rows from churn_data.
+NOTE: Wrote high_risk (100 rows, 22 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC FREQ
+NOTE: ODS plot written: freq_mosaic_risk_churn.spec.json
+NOTE: PROC FREQ statement used.

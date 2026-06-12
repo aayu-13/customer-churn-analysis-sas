@@ -1,0 +1,8 @@
+{
+  "bundle": "t001_churn_pipeline",
+  "source_file": "code/Customer Churn Analysis SAS.sas",
+  "source_blob_sha": "5c80b966204def479f629d7c0f9162c435c05cbe",
+  "source_commit": "4ac4adf393bdb4548ce948606f74087221b4bf90",
+  "tier": "real_data",
+  "notes": "Full churn-analysis pipeline run as written (PROC IMPORT -> CONTENTS -> PRINT -> two PROC SQL aggregations -> DATA step high_risk -> PROC FREQ Risk*Churn). Made self-contained so it runs with no external file: a leading DATA _null_ writes a 150-row sample of the repo's own data/churn.csv to a work file, then the original PROC IMPORT reads that copy (datafile path changed from /home/your-folder/churn.csv to churn.csv). Sample is a deterministic stride sample of data/churn.csv: all 3 contract types, 108 No / 42 Yes (~28% churn). PROC FREQ also emits a Risk-by-Churn mosaic plot (PNG+SVG)."
+}
